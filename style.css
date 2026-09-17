@@ -292,3 +292,383 @@ body {
   }
 
 }
+
+/* =====================================
+   GUIDE - STEP 1
+===================================== */
+
+.guide-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 200, 40, .06),
+      transparent 30%
+    ),
+    #050505;
+}
+
+
+.step-page {
+  width: 100%;
+  max-width: 720px;
+
+  margin: auto;
+
+  padding: 30px 20px 70px;
+}
+
+
+/* HEADER */
+
+.step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+
+.back-home {
+  color: #777;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: .2s;
+}
+
+
+.back-home:hover {
+  color: white;
+}
+
+
+.step-count {
+  color: #666;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* PROGRESS */
+
+.step-progress-line {
+  width: 100%;
+  height: 3px;
+
+  background: #191919;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+
+.step-progress-active {
+  width: 20%;
+  height: 100%;
+
+  background: #f5c842;
+
+  border-radius: 10px;
+}
+
+
+/* MAIN */
+
+.step-main {
+  padding-top: 70px;
+}
+
+
+.step-badge {
+  display: inline-block;
+
+  padding: 7px 11px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #292929;
+
+  border-radius: 20px;
+
+  color: #777;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.step-big-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  background: #111;
+
+  border: 1px solid #292929;
+
+  border-radius: 22px;
+
+  font-size: 31px;
+}
+
+
+.step-main h1 {
+  max-width: 650px;
+
+  font-size: clamp(
+    42px,
+    8vw,
+    65px
+  );
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+}
+
+
+.step-main h1 span {
+  color: #f5c842;
+}
+
+
+.step-intro {
+  max-width: 570px;
+
+  margin-top: 22px;
+
+  color: #888;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* MINI STEPS */
+
+.mini-steps {
+  margin-top: 45px;
+
+  border-top: 1px solid #202020;
+}
+
+
+.mini-step {
+  display: grid;
+
+  grid-template-columns: 42px 1fr;
+
+  gap: 16px;
+
+  padding: 22px 0;
+
+  border-bottom: 1px solid #202020;
+}
+
+
+.mini-number {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #151515;
+
+  border: 1px solid #292929;
+
+  color: #aaa;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+.mini-step strong {
+  font-size: 15px;
+}
+
+
+.mini-step p {
+  max-width: 520px;
+
+  margin-top: 5px;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* DONE */
+
+.done-box {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 35px;
+
+  padding: 19px;
+
+  background:
+    rgba(245, 200, 66, .05);
+
+  border:
+    1px solid rgba(245, 200, 66, .18);
+
+  border-radius: 17px;
+}
+
+
+.done-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5c842;
+
+  color: #000;
+
+  border-radius: 50%;
+
+  font-weight: 900;
+}
+
+
+.done-box strong {
+  font-size: 13px;
+}
+
+
+.done-box p {
+  margin-top: 3px;
+
+  color: #888;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* CONTINUE */
+
+.continue-btn {
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: white;
+
+  color: black;
+
+  border-radius: 16px;
+
+  text-decoration: none;
+
+  transition: .2s;
+}
+
+
+.continue-btn:hover {
+  background: #f5c842;
+
+  transform: translateY(-2px);
+}
+
+
+.continue-btn small,
+.continue-btn strong {
+  display: block;
+}
+
+
+.continue-btn small {
+  margin-bottom: 2px;
+
+  opacity: .55;
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+}
+
+
+.continue-btn strong {
+  font-size: 15px;
+}
+
+
+.continue-btn > span {
+  font-size: 23px;
+}
+
+
+.step-warning {
+  margin-top: 15px;
+
+  text-align: center;
+
+  color: #555;
+
+  font-size: 11px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .step-page {
+    padding:
+      22px
+      18px
+      50px;
+  }
+
+  .step-main {
+    padding-top: 50px;
+  }
+
+  .step-main h1 {
+    letter-spacing: -2px;
+  }
+
+}
