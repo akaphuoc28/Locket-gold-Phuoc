@@ -1,47 +1,67 @@
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+let currentStep = 0;
 
-  link.addEventListener("click", function (event) {
+const screens = [
+  "welcome",
+  "step1",
+  "step2"
+];
 
-    const target =
-      document.querySelector(this.getAttribute("href"));
 
-    if (!target) return;
+function showScreen(index) {
 
-    event.preventDefault();
-
-    target.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
+  document
+    .querySelectorAll(".screen")
+    .forEach(screen => {
+      screen.classList.remove("active");
     });
 
+
+  const screen =
+    document.getElementById(screens[index]);
+
+  if (!screen) return;
+
+
+  screen.classList.add("active");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
   });
-
-});
-
-
-const finalChecks =
-  document.querySelectorAll(".final-checklist input");
-
-const completeMessage =
-  document.getElementById("completeMessage");
-
-
-function checkCompletion() {
-
-  const completed =
-    [...finalChecks].every(item => item.checked);
-
-  completeMessage.style.display =
-    completed ? "block" : "none";
 
 }
 
 
-finalChecks.forEach(item => {
+function startGuide() {
 
-  item.addEventListener(
-    "change",
-    checkCompletion
-  );
+  currentStep = 1;
 
-});
+  showScreen(currentStep);
+
+}
+
+
+function nextStep() {
+
+  if (currentStep >= screens.length - 1)
+    return;
+
+
+  currentStep++;
+
+  showScreen(currentStep);
+
+}
+
+
+function previousStep() {
+
+  if (currentStep <= 0)
+    return;
+
+
+  currentStep--;
+
+  showScreen(currentStep);
+
+}
