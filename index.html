@@ -3,60 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+
   <title>Locket Support | Phuoc</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">🔒</div>
-  <div>
-    <h1>Locket Support</h1>
-    <p>Hướng dẫn thiết lập trên iPhone</p>
+<header class="topbar">
+  <a href="#" class="brand">
+    <div class="brand-icon">🔒</div>
+
+    <div>
+      <strong>Locket Support</strong>
+      <small>by Phuoc</small>
+    </div>
+  </a>
+
+  <div class="status">
+    HƯỚNG DẪN
   </div>
 </header>
 
+
 <main>
 
+  <!-- HERO -->
+
   <section class="hero">
-    <span class="badge">HƯỚNG DẪN TỪNG BƯỚC</span>
 
-    <h2>Thiết lập Locket<br>trên iPhone</h2>
+    <div class="hero-badge">
+      HƯỚNG DẪN CHO IPHONE
+    </div>
 
-    <p>
-      Làm theo từng bước bên dưới. Bạn cần một iPhone,
-      PC/Laptop và cáp kết nối.
+    <h1>
+      Thiết lập Locket<br>
+      từng bước.
+    </h1>
+
+    <p class="hero-description">
+      Làm lần lượt theo hướng dẫn bên dưới.
+      Không cần biết kỹ thuật trước.
     </p>
 
-    <a href="#guide" class="primary-btn">
-      Bắt đầu hướng dẫn ↓
+    <a href="#prepare" class="primary-button">
+      Bắt đầu
+      <span>↓</span>
     </a>
-  </section>
 
+    <div class="hero-info">
 
-  <section class="requirements">
+      <div>
+        <strong>6</strong>
+        <span>Bước</span>
+      </div>
 
-    <h3>Chuẩn bị</h3>
-
-    <div class="require-grid">
-
-      <div class="require-card">
-        <span>📱</span>
+      <div>
         <strong>iPhone</strong>
-        <small>Thiết bị cần cài đặt</small>
+        <span>Thiết bị</span>
       </div>
 
-      <div class="require-card">
-        <span>💻</span>
-        <strong>PC / Laptop</strong>
-        <small>Máy tính Windows</small>
-      </div>
-
-      <div class="require-card">
-        <span>🔌</span>
-        <strong>Cáp kết nối</strong>
-        <small>Kết nối iPhone với PC</small>
+      <div>
+        <strong>Windows</strong>
+        <span>PC / Laptop</span>
       </div>
 
     </div>
@@ -64,133 +75,528 @@
   </section>
 
 
-  <section id="guide" class="guide">
+  <!-- PREPARE -->
 
-    <div class="section-title">
-      <span>HƯỚNG DẪN</span>
-      <h2>Các bước thực hiện</h2>
+  <section id="prepare" class="section">
+
+    <div class="section-heading">
+      <span>TRƯỚC KHI BẮT ĐẦU</span>
+      <h2>Chuẩn bị</h2>
+
+      <p>
+        Kiểm tra bạn đã có đầy đủ những thứ dưới đây.
+      </p>
     </div>
+
+
+    <div class="prepare-grid">
+
+      <label class="check-card">
+        <input type="checkbox">
+        <div class="check-icon">📱</div>
+
+        <div>
+          <strong>iPhone</strong>
+          <small>Đã mở khóa</small>
+        </div>
+      </label>
+
+
+      <label class="check-card">
+        <input type="checkbox">
+        <div class="check-icon">💻</div>
+
+        <div>
+          <strong>PC / Laptop</strong>
+          <small>Máy Windows</small>
+        </div>
+      </label>
+
+
+      <label class="check-card">
+        <input type="checkbox">
+        <div class="check-icon">🔌</div>
+
+        <div>
+          <strong>Cáp kết nối</strong>
+          <small>Lightning hoặc USB-C phù hợp</small>
+        </div>
+      </label>
+
+
+      <label class="check-card">
+        <input type="checkbox">
+        <div class="check-icon">🌐</div>
+
+        <div>
+          <strong>Internet</strong>
+          <small>Kết nối ổn định</small>
+        </div>
+      </label>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- GUIDE -->
+
+  <section class="section guide-section">
+
+    <div class="section-heading">
+
+      <span>HƯỚNG DẪN</span>
+
+      <h2>Làm theo thứ tự</h2>
+
+      <p>
+        Hoàn thành từng bước trước khi chuyển sang bước tiếp theo.
+      </p>
+
+    </div>
+
 
 
     <!-- STEP 1 -->
 
-    <article class="step">
+    <article class="guide-card">
 
-      <div class="step-number">1</div>
+      <div class="step-top">
 
-      <div class="step-content">
+        <div class="step-number">
+          01
+        </div>
 
-        <span class="step-label">BƯỚC 01</span>
-
-        <h3>Tải 3uTools</h3>
-
-        <p>
-          Trên PC/Laptop, tải và cài đặt 3uTools.
-        </p>
-
-        <div class="note">
-          3uTools được cài trên máy tính, không phải trên iPhone.
+        <div class="step-progress">
+          BƯỚC 1 / 6
         </div>
 
       </div>
 
+
+      <h3>Tải 3uTools</h3>
+
+      <p class="step-description">
+        Trên PC hoặc Laptop Windows, tải và cài đặt 3uTools.
+      </p>
+
+
+      <div class="instruction-list">
+
+        <div class="instruction">
+
+          <span>1</span>
+
+          <div>
+            <strong>Mở trình duyệt trên máy tính</strong>
+            <p>Chrome, Edge hoặc trình duyệt bạn đang sử dụng.</p>
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <span>2</span>
+
+          <div>
+            <strong>Tải 3uTools</strong>
+            <p>Sử dụng trang tải chính thức của 3uTools.</p>
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <span>3</span>
+
+          <div>
+            <strong>Cài đặt</strong>
+            <p>Mở file vừa tải và hoàn thành quá trình cài đặt.</p>
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <span>4</span>
+
+          <div>
+            <strong>Mở 3uTools</strong>
+            <p>Để chương trình chạy trước khi kết nối iPhone.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="tip">
+        <strong>✓ Hoàn thành khi</strong>
+        <p>3uTools đã mở được trên PC/Laptop.</p>
+      </div>
+
     </article>
+
 
 
     <!-- STEP 2 -->
 
-    <article class="step">
+    <article class="guide-card">
 
-      <div class="step-number">2</div>
+      <div class="step-top">
 
-      <div class="step-content">
+        <div class="step-number">
+          02
+        </div>
 
-        <span class="step-label">BƯỚC 02</span>
+        <div class="step-progress">
+          BƯỚC 2 / 6
+        </div>
 
-        <h3>Kết nối iPhone</h3>
+      </div>
+
+
+      <h3>Kết nối iPhone</h3>
+
+      <p class="step-description">
+        Kết nối iPhone với máy tính để 3uTools nhận thiết bị.
+      </p>
+
+
+      <div class="instruction-list">
+
+        <div class="instruction">
+
+          <span>1</span>
+
+          <div>
+            <strong>Mở khóa iPhone</strong>
+            <p>Giữ iPhone ở màn hình chính.</p>
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <span>2</span>
+
+          <div>
+            <strong>Cắm cáp</strong>
+            <p>Kết nối iPhone với PC/Laptop.</p>
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <span>3</span>
+
+          <div>
+            <strong>Chọn “Tin cậy”</strong>
+
+            <p>
+              Nếu iPhone hỏi
+              “Tin cậy máy tính này?”,
+              chọn Tin cậy.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <span>4</span>
+
+          <div>
+            <strong>Nhập mật mã</strong>
+
+            <p>
+              Nhập mật mã mở khóa iPhone nếu hệ thống yêu cầu.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="tip">
+
+        <strong>✓ Hoàn thành khi</strong>
 
         <p>
-          Dùng cáp kết nối iPhone với PC/Laptop.
-        </p>
-
-        <p>
-          Nếu iPhone hiện thông báo
-          <strong>“Tin cậy máy tính này?”</strong>,
-          chọn <strong>Tin cậy</strong>.
+          3uTools hiển thị thông tin chiếc iPhone đang kết nối.
         </p>
 
       </div>
 
     </article>
+
 
 
     <!-- STEP 3 -->
 
-    <article class="step">
+    <article class="guide-card">
 
-      <div class="step-number">3</div>
+      <div class="step-top">
 
-      <div class="step-content">
+        <div class="step-number">
+          03
+        </div>
 
-        <span class="step-label">BƯỚC 03</span>
-
-        <h3>Cài Shadowrocket</h3>
-
-        <p>
-          Mở 3uTools trên máy tính và thực hiện cài
-          Shadowrocket lên iPhone theo phương thức bạn đang sử dụng.
-        </p>
-
-        <div class="check">
-          ✓ Sau khi hoàn thành, kiểm tra Shadowrocket đã xuất hiện
-          trên màn hình iPhone.
+        <div class="step-progress">
+          BƯỚC 3 / 6
         </div>
 
       </div>
 
+
+      <h3>Cài Shadowrocket</h3>
+
+      <p class="step-description">
+        Thực hiện cài Shadowrocket lên chiếc iPhone đã kết nối
+        bằng phương thức 3uTools mà bạn đang sử dụng.
+      </p>
+
+
+      <div class="instruction-list">
+
+        <div class="instruction">
+
+          <span>1</span>
+
+          <div>
+            <strong>Giữ iPhone kết nối</strong>
+            <p>Không rút cáp trong quá trình cài.</p>
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <span>2</span>
+
+          <div>
+            <strong>Thực hiện cài đặt</strong>
+            <p>Làm theo giao diện 3uTools trên PC.</p>
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <span>3</span>
+
+          <div>
+            <strong>Chờ quá trình hoàn tất</strong>
+            <p>Không ngắt kết nối iPhone giữa chừng.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="warning">
+
+        <strong>⚠ Lưu ý</strong>
+
+        <p>
+          Chỉ cài ứng dụng hoặc cấu hình từ nguồn mà bạn tin tưởng.
+        </p>
+
+      </div>
+
+
+      <div class="tip">
+
+        <strong>✓ Hoàn thành khi</strong>
+
+        <p>
+          Biểu tượng Shadowrocket xuất hiện trên iPhone.
+        </p>
+
+      </div>
+
     </article>
+
 
 
     <!-- STEP 4 -->
 
-    <article class="step">
+    <article class="guide-card">
 
-      <div class="step-number">4</div>
+      <div class="step-top">
 
-      <div class="step-content">
+        <div class="step-number">
+          04
+        </div>
 
-        <span class="step-label">BƯỚC 04</span>
+        <div class="step-progress">
+          BƯỚC 4 / 6
+        </div>
 
-        <h3>Thiết lập Shadowrocket</h3>
+      </div>
+
+
+      <h3>Mở Shadowrocket</h3>
+
+      <p class="step-description">
+        Kiểm tra ứng dụng đã được cài và có thể khởi động bình thường.
+      </p>
+
+
+      <div class="instruction-list">
+
+        <div class="instruction">
+
+          <span>1</span>
+
+          <div>
+            <strong>Mở iPhone</strong>
+            <p>Tìm Shadowrocket trên màn hình chính.</p>
+          </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+          <span>2</span>
+
+          <div>
+            <strong>Mở Shadowrocket</strong>
+            <p>Kiểm tra ứng dụng có khởi động bình thường hay không.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="tip">
+
+        <strong>✓ Hoàn thành khi</strong>
 
         <p>
-          Mở Shadowrocket và hoàn tất các thiết lập mạng cần thiết.
+          Bạn đã vào được giao diện chính của Shadowrocket.
         </p>
-
-        <div class="warning">
-          Chỉ cài chứng chỉ hoặc cấu hình mạng từ nguồn mà bạn tin tưởng.
-        </div>
 
       </div>
 
     </article>
 
 
+
     <!-- STEP 5 -->
 
-    <article class="step">
+    <article class="guide-card">
 
-      <div class="step-number">5</div>
+      <div class="step-top">
 
-      <div class="step-content">
+        <div class="step-number">
+          05
+        </div>
 
-        <span class="step-label">BƯỚC 05</span>
+        <div class="step-progress">
+          BƯỚC 5 / 6
+        </div>
 
-        <h3>Kiểm tra cấu hình</h3>
+      </div>
+
+
+      <h3>Thiết lập mạng</h3>
+
+      <p class="step-description">
+        Hoàn thành các cấu hình mạng cần thiết cho mục đích sử dụng
+        Shadowrocket của bạn.
+      </p>
+
+
+      <div class="warning">
+
+        <strong>⚠ Chứng chỉ</strong>
 
         <p>
-          Kiểm tra Shadowrocket, VPN/DNS và kết nối Internet
-          hoạt động bình thường.
+          Không cài hoặc tin cậy chứng chỉ không rõ nguồn gốc.
+          Chứng chỉ được tin cậy có thể ảnh hưởng đến cách lưu lượng
+          HTTPS trên thiết bị được xử lý.
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- STEP 6 -->
+
+    <article class="guide-card final-card">
+
+      <div class="step-top">
+
+        <div class="step-number">
+          ✓
+        </div>
+
+        <div class="step-progress">
+          BƯỚC 6 / 6
+        </div>
+
+      </div>
+
+
+      <h3>Kiểm tra lần cuối</h3>
+
+      <p class="step-description">
+        Đánh dấu từng mục bên dưới.
+      </p>
+
+
+      <div class="final-checklist">
+
+        <label>
+          <input type="checkbox">
+          <span>3uTools nhận iPhone</span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span>Shadowrocket đã được cài</span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span>Shadowrocket mở bình thường</span>
+        </label>
+
+        <label>
+          <input type="checkbox">
+          <span>Internet trên iPhone hoạt động</span>
+        </label>
+
+      </div>
+
+
+      <div id="completeMessage" class="complete-message">
+
+        <div>✓</div>
+
+        <strong>Hoàn tất</strong>
+
+        <p>
+          Các bước thiết lập cơ bản đã hoàn thành.
         </p>
 
       </div>
@@ -200,25 +606,75 @@
   </section>
 
 
-  <section class="help">
 
-    <span>HỖ TRỢ</span>
+  <!-- TROUBLESHOOT -->
 
-    <h2>Gặp lỗi?</h2>
+  <section class="section">
 
-    <p>
-      Kiểm tra lại kết nối iPhone, trạng thái Shadowrocket
-      và các cấu hình mạng đã cài.
-    </p>
+    <div class="section-heading">
+
+      <span>XỬ LÝ LỖI</span>
+
+      <h2>Nếu không hoạt động</h2>
+
+    </div>
+
+
+    <details>
+
+      <summary>
+        3uTools không nhận iPhone
+      </summary>
+
+      <p>
+        Kiểm tra cáp kết nối, mở khóa iPhone và kiểm tra
+        iPhone đã chọn Tin cậy máy tính hay chưa.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Không thấy Shadowrocket
+      </summary>
+
+      <p>
+        Kiểm tra lại quá trình cài đặt trên 3uTools và xác nhận
+        quá trình đã hoàn thành.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        Mất Internet sau khi cấu hình
+      </summary>
+
+      <p>
+        Tắt cấu hình VPN/proxy vừa bật và kiểm tra lại kết nối
+        Internet trước khi tiếp tục.
+      </p>
+
+    </details>
 
   </section>
 
 </main>
 
 
+
 <footer>
+
   <strong>Locket Support</strong>
-  <p>Made by Phuoc</p>
+
+  <p>
+    Hướng dẫn bởi Phuoc
+  </p>
+
 </footer>
 
 
