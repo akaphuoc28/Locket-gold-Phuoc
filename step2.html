@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+
+  <title>Bước 2 - Tải 3uTools | Phước</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(245,200,66,.08), transparent 35%),
+        #050505;
+      color: white;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+      margin: auto;
+      padding: 30px 20px 60px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top a {
+      color: #777;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .top span {
+      color: #666;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .progress {
+      height: 3px;
+      margin-top: 18px;
+      background: #191919;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress div {
+      width: 40%;
+      height: 100%;
+      background: #f5c842;
+    }
+
+    .heading {
+      padding: 75px 0 40px;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 7px 12px;
+      margin-bottom: 22px;
+
+      border: 1px solid #292929;
+      border-radius: 30px;
+
+      color: #777;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 8vw, 67px);
+      line-height: .98;
+      letter-spacing: -3px;
+    }
+
+    h1 span {
+      color: #f5c842;
+    }
+
+    .heading p {
+      max-width: 520px;
+      margin-top: 22px;
+
+      color: #888;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* DOWNLOAD CARD */
+
+    .download-card {
+      padding: 28px;
+
+      background: linear-gradient(145deg, #121212, #0d0d0d);
+
+      border: 1px solid #222;
+      border-radius: 22px;
+    }
+
+    .app {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .app-icon {
+      width: 65px;
+      height: 65px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #191919;
+      border: 1px solid #292929;
+      border-radius: 18px;
+
+      font-size: 30px;
+    }
+
+    .app small {
+      color: #666;
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    .app h2 {
+      margin-top: 3px;
+      font-size: 23px;
+    }
+
+    .app p {
+      margin-top: 3px;
+      color: #777;
+      font-size: 12px;
+    }
+
+    /* DOWNLOAD BUTTON */
+
+    .download-btn {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      margin-top: 25px;
+      padding: 19px 21px;
+
+      background: #f5c842;
+      color: #000;
+
+      border-radius: 16px;
+
+      text-decoration: none;
+
+      transition: .2s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-2px);
+      background: #ffd95b;
+    }
+
+    .download-btn small,
+    .download-btn strong {
+      display: block;
+    }
+
+    .download-btn small {
+      margin-bottom: 2px;
+      opacity: .55;
+      font-size: 8px;
+      letter-spacing: 1.5px;
+    }
+
+    .download-btn strong {
+      font-size: 17px;
+    }
+
+    .download-btn > span:last-child {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    /* INFO */
+
+    .info {
+      display: flex;
+      gap: 14px;
+
+      margin-top: 20px;
+      padding: 17px;
+
+      background: rgba(255,255,255,.025);
+
+      border: 1px solid #202020;
+      border-radius: 16px;
+    }
+
+    .info-icon {
+      width: 35px;
+      height: 35px;
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid #333;
+      border-radius: 50%;
+
+      color: #888;
+      font-size: 12px;
+    }
+
+    .info strong {
+      font-size: 12px;
+    }
+
+    .info p {
+      margin-top: 4px;
+
+      color: #777;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* INSTALL AREA */
+
+    .install {
+      margin-top: 55px;
+    }
+
+    .install-label {
+      color: #555;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .install h2 {
+      margin-top: 8px;
+      font-size: 26px;
+    }
+
+    .placeholder {
+      margin-top: 20px;
+      padding: 40px 20px;
+
+      text-align: center;
+
+      border: 1px dashed #292929;
+      border-radius: 18px;
+
+      color: #555;
+      font-size: 12px;
+    }
+
+    /* NAV */
+
+    .nav {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 12px;
+
+      margin-top: 35px;
+    }
+
+    .back,
+    .next {
+      padding: 17px 18px;
+
+      border-radius: 15px;
+
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .back {
+      background: #111;
+      color: #888;
+      border: 1px solid #222;
+    }
+
+    .next {
+      display: flex;
+      justify-content: space-between;
+
+      background: white;
+      color: black;
+    }
+
+    .footer {
+      margin-top: 27px;
+
+      text-align: center;
+
+      color: #3f3f3f;
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    @media(max-width:600px) {
+      .container {
+        padding: 22px 17px 45px;
+      }
+
+      .heading {
+        padding-top: 55px;
+      }
+
+      h1 {
+        font-size: 45px;
+      }
+
+      .download-card {
+        padding: 20px;
+      }
+
+      .nav {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+<main class="container">
+
+  <div class="top">
+
+    <a href="./guide.html">
+      ← Bước trước
+    </a>
+
+    <span>
+      BƯỚC 2
+    </span>
+
+  </div>
+
+
+  <div class="progress">
+    <div></div>
+  </div>
+
+
+  <section class="heading">
+
+    <div class="label">
+      BƯỚC 02
+    </div>
+
+    <h1>
+      Tải và cài đặt<br>
+      <span>3uTools</span>
+    </h1>
+
+    <p>
+      Tải 3uTools về PC/Laptop Windows.
+      Sau khi tải hoàn tất, tiếp tục phần hướng dẫn cài đặt bên dưới.
+    </p>
+
+  </section>
+
+
+  <section class="download-card">
+
+    <div class="app">
+
+      <div class="app-icon">
+        💻
+      </div>
+
+      <div>
+
+        <small>
+          WINDOWS
+        </small>
+
+        <h2>
+          3uTools
+        </h2>
+
+        <p>
+          Bộ cài đặt dành cho PC/Laptop
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <a
+      class="download-btn"
+      href="https://url.3u.com/zmAJjyaa"
+      rel="noopener"
+    >
+
+      <div>
+
+        <small>
+          NGUỒN CHÍNH THỨC 3UTOOLS
+        </small>
+
+        <strong>
+          ↓ Tải 3uTools
+        </strong>
+
+      </div>
+
+      <span>
+        →
+      </span>
+
+    </a>
+
+
+    <div class="info">
+
+      <div class="info-icon">
+        i
+      </div>
+
+      <div>
+
+        <strong>
+          Tải xuống an toàn
+        </strong>
+
+        <p>
+          Nút tải sử dụng đường dẫn tải do
+          trang chính thức 3uTools cung cấp.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SAU NÀY CHÈN ẢNH HƯỚNG DẪN VÀO ĐÂY -->
+
+  <section class="install">
+
+    <div class="install-label">
+      SAU KHI TẢI XONG
+    </div>
+
+    <h2>
+      Cài đặt 3uTools
+    </h2>
+
+    <div class="placeholder">
+      📷 Hình ảnh hướng dẫn cài đặt sẽ được thêm tại đây
+    </div>
+
+  </section>
+
+
+  <div class="nav">
+
+    <a
+      href="./guide.html"
+      class="back"
+    >
+      ← Quay lại
+    </a>
+
+    <a
+      href="./step3.html"
+      class="next"
+    >
+
+      <span>
+        Đã cài đặt xong
+      </span>
+
+      <span>
+        →
+      </span>
+
+    </a>
+
+  </div>
+
+
+  <p class="footer">
+    LOCKET GOLD GUIDE • PHƯỚC
+  </p>
+
+</main>
+
+</body>
+</html>
