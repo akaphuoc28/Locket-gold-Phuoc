@@ -614,3 +614,590 @@ body {
   }
 
 }
+/* =====================================
+   STEP 4 - SHADOWROCKET TUTORIAL
+===================================== */
+
+.shadow-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(245, 200, 66, .07),
+      transparent 32%
+    ),
+    #050505;
+
+  color: #fff;
+}
+
+
+.shadow-container {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  padding:
+    30px 20px
+    60px;
+}
+
+
+/* TOP */
+
+.shadow-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.shadow-top a {
+  color: #777;
+
+  text-decoration: none;
+
+  font-size: 12px;
+}
+
+
+.shadow-top a:hover {
+  color: #fff;
+}
+
+
+.shadow-top > span {
+  color: #666;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.shadow-progress {
+  width: 100%;
+  height: 3px;
+
+  margin-top: 18px;
+
+  overflow: hidden;
+
+  background: #191919;
+
+  border-radius: 50px;
+}
+
+
+.shadow-progress > div {
+  width: 0%;
+  height: 100%;
+
+  background: #f5c842;
+
+  border-radius: 50px;
+
+  transition:
+    width .35s ease;
+}
+
+
+/* HEADING */
+
+.shadow-heading {
+  padding:
+    65px 0
+    35px;
+}
+
+
+.shadow-label {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  padding:
+    7px 12px;
+
+  color: #777;
+
+  border:
+    1px solid #292929;
+
+  border-radius: 50px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.shadow-heading h1 {
+  font-size:
+    clamp(
+      42px,
+      8vw,
+      65px
+    );
+
+  line-height: .98;
+
+  letter-spacing: -3px;
+}
+
+
+.shadow-heading p {
+  max-width: 540px;
+
+  margin-top: 20px;
+
+  color: #888;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+.shadow-heading p strong {
+  color: #ddd;
+}
+
+
+/* CARD */
+
+.tutorial-card {
+  padding: 20px;
+
+  background: #0e0e0e;
+
+  border:
+    1px solid #222;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 30px 80px
+    rgba(0, 0, 0, .4);
+}
+
+
+/* STATUS */
+
+.tutorial-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 17px;
+
+  border-bottom:
+    1px solid #202020;
+}
+
+
+.tutorial-status > span {
+  color: #555;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.tutorial-status strong {
+  color: #777;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+
+/* TITLE */
+
+.tutorial-title {
+  display: grid;
+
+  grid-template-columns:
+    48px 1fr;
+
+  gap: 15px;
+
+  align-items: center;
+
+  padding:
+    22px 0;
+}
+
+
+.tutorial-number {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background:
+    rgba(245, 200, 66, .08);
+
+  border:
+    1px solid
+    rgba(245, 200, 66, .2);
+
+  border-radius: 14px;
+
+  color: #f5c842;
+
+  font-size: 12px;
+  font-weight: 900;
+}
+
+
+.tutorial-title h2 {
+  font-size: 20px;
+
+  letter-spacing: -.5px;
+}
+
+
+.tutorial-title p {
+  margin-top: 5px;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* IMAGE */
+
+.tutorial-image-box {
+  width: 100%;
+
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 10px;
+
+  background: #050505;
+
+  border:
+    1px solid #202020;
+
+  border-radius: 18px;
+
+  user-select: none;
+}
+
+
+.tutorial-image-box img {
+  display: block;
+
+  max-width: 100%;
+
+  width: auto;
+
+  max-height: 68vh;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+}
+
+
+.tutorial-image-show {
+  animation:
+    tutorialImageShow
+    .3s ease;
+}
+
+
+@keyframes tutorialImageShow {
+
+  from {
+    opacity: .25;
+    transform:
+      translateX(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateX(0);
+  }
+
+}
+
+
+/* DOTS */
+
+.tutorial-dots {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  padding:
+    20px 10px
+    5px;
+}
+
+
+.tutorial-dot {
+  width: 6px;
+  height: 6px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #333;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+
+.tutorial-dot.active {
+  width: 19px;
+
+  border-radius: 20px;
+
+  background: #f5c842;
+}
+
+
+/* CONTROLS */
+
+.tutorial-controls {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1.35fr;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+
+.tutorial-btn {
+  min-height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  padding:
+    13px 17px;
+
+  border: 0;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition: .2s;
+}
+
+
+.tutorial-btn:hover {
+  transform:
+    translateY(-2px);
+}
+
+
+.tutorial-btn small {
+  display: block;
+
+  margin-bottom: 2px;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  opacity: .5;
+}
+
+
+.tutorial-btn strong {
+  display: block;
+
+  font-size: 14px;
+}
+
+
+.tutorial-btn > span {
+  font-size: 20px;
+}
+
+
+.tutorial-prev {
+  background: #191919;
+
+  color: #aaa;
+
+  text-align: right;
+}
+
+
+.tutorial-prev:disabled {
+  opacity: .25;
+
+  cursor: default;
+
+  transform: none;
+}
+
+
+.tutorial-next {
+  background: #fff;
+
+  color: #000;
+
+  text-align: left;
+}
+
+
+.tutorial-next:hover {
+  background: #f5c842;
+}
+
+
+/* FOOTER */
+
+.shadow-bottom {
+  margin-top: 25px;
+
+  color: #3f3f3f;
+
+  text-align: center;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .shadow-container {
+    padding:
+      22px 15px
+      40px;
+  }
+
+
+  .shadow-heading {
+    padding:
+      50px 2px
+      28px;
+  }
+
+
+  .shadow-heading h1 {
+    letter-spacing: -2px;
+  }
+
+
+  .tutorial-card {
+    padding: 13px;
+
+    border-radius: 20px;
+  }
+
+
+  .tutorial-title {
+    grid-template-columns:
+      42px 1fr;
+
+    gap: 12px;
+
+    padding:
+      18px 2px;
+  }
+
+
+  .tutorial-number {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 12px;
+  }
+
+
+  .tutorial-title h2 {
+    font-size: 18px;
+  }
+
+
+  .tutorial-title p {
+    font-size: 12px;
+  }
+
+
+  .tutorial-image-box {
+    min-height: 0;
+
+    padding: 6px;
+
+    border-radius: 15px;
+  }
+
+
+  .tutorial-image-box img {
+    max-height: 64vh;
+
+    border-radius: 10px;
+  }
+
+
+  .tutorial-controls {
+    grid-template-columns:
+      1fr 1.3fr;
+  }
+
+
+  .tutorial-btn {
+    min-height: 61px;
+
+    padding:
+      11px 13px;
+  }
+
+
+  .tutorial-btn strong {
+    font-size: 13px;
+  }
+
+}
