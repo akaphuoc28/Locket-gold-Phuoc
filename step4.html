@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+
+  <title>Bước 4 - Shadowrocket | Phước</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="shadow-page">
+
+  <main class="shadow-container">
+
+    <!-- TOP -->
+    <div class="shadow-top">
+      <a href="./step3.html">← Bước trước</a>
+
+      <span>BƯỚC 4</span>
+    </div>
+
+    <div class="shadow-progress">
+      <div id="mainProgress"></div>
+    </div>
+
+
+    <!-- HEADING -->
+    <section class="shadow-heading">
+
+      <div class="shadow-label">
+        BƯỚC 04 • SHADOWROCKET
+      </div>
+
+      <h1>
+        Thiết lập<br>
+        Shadowrocket
+      </h1>
+
+      <p>
+        Làm lần lượt theo từng hình bên dưới.
+        Bấm <strong>Tiếp theo</strong> sau khi hoàn thành mỗi bước.
+      </p>
+
+    </section>
+
+
+    <!-- SLIDESHOW -->
+    <section class="tutorial-card">
+
+      <div class="tutorial-status">
+
+        <span id="stepLabel">
+          HƯỚNG DẪN
+        </span>
+
+        <strong>
+          <span id="currentStep">1</span>
+          /
+          <span id="totalStep">13</span>
+        </strong>
+
+      </div>
+
+
+      <!-- TITLE -->
+      <div class="tutorial-title">
+
+        <div class="tutorial-number" id="stepNumber">
+          01
+        </div>
+
+        <div>
+          <h2 id="stepTitle">
+            Mở Shadowrocket
+          </h2>
+
+          <p id="stepDescription">
+            Mở ứng dụng Shadowrocket trên iPhone.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- IMAGE -->
+      <div class="tutorial-image-box">
+
+        <img
+          id="tutorialImage"
+          src="./images/shadow-01.jpg"
+          alt="Hướng dẫn Shadowrocket"
+        >
+
+      </div>
+
+
+      <!-- DOTS -->
+      <div
+        class="tutorial-dots"
+        id="tutorialDots">
+      </div>
+
+
+      <!-- BUTTONS -->
+      <div class="tutorial-controls">
+
+        <button
+          id="prevButton"
+          class="tutorial-btn tutorial-prev"
+          onclick="previousStep()"
+        >
+          <span>←</span>
+
+          <div>
+            <small>QUAY LẠI</small>
+            <strong>Trước</strong>
+          </div>
+        </button>
+
+
+        <button
+          id="nextButton"
+          class="tutorial-btn tutorial-next"
+          onclick="nextStep()"
+        >
+
+          <div>
+            <small>ĐÃ LÀM XONG</small>
+            <strong>Tiếp theo</strong>
+          </div>
+
+          <span>→</span>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <p class="shadow-bottom">
+      LOCKET GOLD GUIDE • PHƯỚC
+    </p>
+
+  </main>
+
+
+<script>
+
+const steps = [
+
+  {
+    image: "./images/shadow-01.jpg",
+    title: "Mở Shadowrocket",
+    description:
+      "Mở ứng dụng Shadowrocket trên iPhone."
+  },
+
+  {
+    image: "./images/shadow-02.jpg",
+    title: "Mở mục Cấu hình",
+    description:
+      "Ở thanh menu phía dưới, chọn mục Cấu hình."
+  },
+
+  {
+    image: "./images/shadow-03.jpg",
+    title: "Thêm cấu hình",
+    description:
+      "Nhấn dấu + ở góc trên bên phải."
+  },
+
+  {
+    image: "./images/shadow-04.jpg",
+    title: "Nhập cấu hình",
+    description:
+      "Thêm cấu hình hợp lệ mà bạn muốn sử dụng trong Shadowrocket."
+  },
+
+  {
+    image: "./images/shadow-05.jpg",
+    title: "Kiểm tra cấu hình",
+    description:
+      "Sau khi tải thành công, cấu hình sẽ xuất hiện trong danh sách."
+  },
+
+  {
+    image: "./images/shadow-06.jpg",
+    title: "Mở tùy chọn cấu hình",
+    description:
+      "Chạm vào cấu hình để xem các tùy chọn."
+  },
+
+  {
+    image: "./images/shadow-07.jpg",
+    title: "Chỉnh sửa cấu hình",
+    description:
+      "Mở phần chỉnh sửa để xem các thành phần của cấu hình."
+  },
+
+  {
+    image: "./images/shadow-08.jpg",
+    title: "Cài đặt HTTPS",
+    description:
+      "Đây là khu vực thiết lập HTTPS nâng cao của Shadowrocket."
+  },
+
+  {
+    image: "./images/shadow-09.jpg",
+    title: "Thiết lập nâng cao",
+    description:
+      "Kiểm tra các thiết lập HTTPS theo cấu hình mạng hợp lệ của bạn."
+  },
+
+  {
+    image: "./images/shadow-10.jpg",
+    title: "Chứng chỉ",
+    description:
+      "Đây là khu vực quản lý chứng chỉ CA của Shadowrocket."
+  },
+
+  {
+    image: "./images/shadow-11.jpg",
+    title: "Xác nhận",
+    description:
+      "Kiểm tra kỹ thông tin trước khi thực hiện thao tác liên quan đến chứng chỉ."
+  },
+
+  {
+    image: "./images/shadow-12.jpg",
+    title: "Quản lý chứng chỉ",
+    description:
+      "Shadowrocket cho phép quản lý chứng chỉ được tạo trong ứng dụng."
+  },
+
+  {
+    image: "./images/shadow-13.jpg",
+    title: "Hoàn thành",
+    description:
+      "Sau khi hoàn thành cấu hình hợp lệ của bạn, quay trở lại màn hình chính."
+  }
+
+];
+
+
+let current = 0;
+
+
+/* ELEMENTS */
+
+const image =
+  document.getElementById("tutorialImage");
+
+const title =
+  document.getElementById("stepTitle");
+
+const description =
+  document.getElementById("stepDescription");
+
+const currentStep =
+  document.getElementById("currentStep");
+
+const totalStep =
+  document.getElementById("totalStep");
+
+const stepNumber =
+  document.getElementById("stepNumber");
+
+const dots =
+  document.getElementById("tutorialDots");
+
+const prevButton =
+  document.getElementById("prevButton");
+
+const nextButton =
+  document.getElementById("nextButton");
+
+const mainProgress =
+  document.getElementById("mainProgress");
+
+
+totalStep.textContent = steps.length;
+
+
+/* CREATE DOTS */
+
+function createDots() {
+
+  dots.innerHTML = "";
+
+  steps.forEach((step, index) => {
+
+    const dot =
+      document.createElement("button");
+
+    dot.className =
+      "tutorial-dot";
+
+    dot.onclick = () => {
+
+      current = index;
+
+      updateTutorial();
+
+    };
+
+    dots.appendChild(dot);
+
+  });
+
+}
+
+
+function updateTutorial() {
+
+  const step =
+    steps[current];
+
+
+  /* animation */
+
+  image.classList.remove(
+    "tutorial-image-show"
+  );
+
+  void image.offsetWidth;
+
+
+  /* update */
+
+  image.src =
+    step.image;
+
+  title.textContent =
+    step.title;
+
+  description.textContent =
+    step.description;
+
+  currentStep.textContent =
+    current + 1;
+
+  stepNumber.textContent =
+    String(current + 1)
+      .padStart(2, "0");
+
+
+  /* progress */
+
+  const percent =
+    ((current + 1) / steps.length)
+    * 100;
+
+  mainProgress.style.width =
+    percent + "%";
+
+
+  /* dots */
+
+  document
+    .querySelectorAll(".tutorial-dot")
+    .forEach((dot, index) => {
+
+      dot.classList.toggle(
+        "active",
+        index === current
+      );
+
+    });
+
+
+  /* previous */
+
+  prevButton.disabled =
+    current === 0;
+
+
+  /* LAST STEP */
+
+  if (
+    current ===
+    steps.length - 1
+  ) {
+
+    nextButton.innerHTML = `
+
+      <div>
+        <small>HOÀN THÀNH</small>
+        <strong>Sang bước 5</strong>
+      </div>
+
+      <span>→</span>
+
+    `;
+
+  }
+
+  else {
+
+    nextButton.innerHTML = `
+
+      <div>
+        <small>ĐÃ LÀM XONG</small>
+        <strong>Tiếp theo</strong>
+      </div>
+
+      <span>→</span>
+
+    `;
+
+  }
+
+
+  image.classList.add(
+    "tutorial-image-show"
+  );
+
+
+  /* scroll image into view */
+
+  document
+    .querySelector(".tutorial-card")
+    .scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+}
+
+
+function nextStep() {
+
+  if (
+    current <
+    steps.length - 1
+  ) {
+
+    current++;
+
+    updateTutorial();
+
+  }
+
+  else {
+
+    window.location.href =
+      "./step5.html";
+
+  }
+
+}
+
+
+function previousStep() {
+
+  if (current > 0) {
+
+    current--;
+
+    updateTutorial();
+
+  }
+
+}
+
+
+/* SWIPE SUPPORT */
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+document
+  .querySelector(".tutorial-image-box")
+  .addEventListener(
+    "touchstart",
+    function(e) {
+
+      touchStartX =
+        e.changedTouches[0]
+        .screenX;
+
+    }
+  );
+
+
+document
+  .querySelector(".tutorial-image-box")
+  .addEventListener(
+    "touchend",
+    function(e) {
+
+      touchEndX =
+        e.changedTouches[0]
+        .screenX;
+
+      const distance =
+        touchStartX -
+        touchEndX;
+
+      if (distance > 60) {
+        nextStep();
+      }
+
+      if (distance < -60) {
+        previousStep();
+      }
+
+    }
+  );
+
+
+createDots();
+updateTutorial();
+
+</script>
+
+</body>
+</html>
