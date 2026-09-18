@@ -1301,3 +1301,45 @@ body {
 }
 
 }
+.link-copy-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.link-copy-row input {
+  min-width: 0;
+  padding: 13px 14px;
+
+  background: #050505;
+  border: 1px solid #292929;
+  border-radius: 11px;
+
+  color: #aaa;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.link-copy-row button {
+  padding: 0 18px;
+
+  background: #f5c842;
+  color: #000;
+
+  border: 0;
+  border-radius: 11px;
+
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .link-copy-row {
+    grid-template-columns: 1fr;
+  }
+
+  .link-copy-row button {
+    min-height: 46px;
+  }
+}
