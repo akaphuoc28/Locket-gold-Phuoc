@@ -1,16 +1,23 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   width: 100%;
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
+  min-height: 100vh;
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -20,12 +27,20 @@ body {
 
   background: #050505;
   color: #fff;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+a {
+  font-family: inherit;
 }
 
 
-/* ==============================
+/* =========================================================
    WELCOME PAGE
-================================ */
+========================================================= */
 
 .welcome-page {
   min-height: 100vh;
@@ -33,12 +48,11 @@ body {
   background:
     radial-gradient(
       circle at 50% 25%,
-      rgba(255, 205, 50, 0.08),
+      rgba(245, 200, 66, 0.08),
       transparent 30%
     ),
     #050505;
 }
-
 
 .welcome {
   width: 100%;
@@ -51,7 +65,6 @@ body {
   padding: 30px 20px;
 }
 
-
 .welcome-box {
   width: 100%;
   max-width: 720px;
@@ -61,9 +74,7 @@ body {
   animation: welcomeShow .7s ease;
 }
 
-
 @keyframes welcomeShow {
-
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -73,11 +84,10 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-
 }
 
 
-/* ICON */
+/* WELCOME ICON */
 
 .gold-icon {
   width: 80px;
@@ -89,20 +99,19 @@ body {
   align-items: center;
   justify-content: center;
 
-  font-size: 34px;
-
   background: #111;
 
   border: 1px solid #292929;
-
   border-radius: 25px;
+
+  font-size: 34px;
 
   box-shadow:
     0 20px 80px rgba(0, 0, 0, .7);
 }
 
 
-/* SMALL TITLE */
+/* WELCOME SMALL TITLE */
 
 .welcome-small {
   margin-bottom: 18px;
@@ -116,18 +125,14 @@ body {
 }
 
 
-/* MAIN TITLE */
+/* WELCOME MAIN TITLE */
 
 .welcome h1 {
   max-width: 700px;
 
   margin: auto;
 
-  font-size: clamp(
-    39px,
-    7vw,
-    68px
-  );
+  font-size: clamp(39px, 7vw, 68px);
 
   line-height: 1.08;
 
@@ -135,7 +140,6 @@ body {
 
   font-weight: 800;
 }
-
 
 .welcome h1 span {
   display: block;
@@ -151,9 +155,7 @@ body {
 .warning-box {
   max-width: 520px;
 
-  margin:
-    38px auto
-    25px;
+  margin: 38px auto 25px;
 
   padding: 17px 20px;
 
@@ -164,15 +166,12 @@ body {
 
   text-align: left;
 
-  background:
-    rgba(255, 255, 255, .035);
+  background: rgba(255, 255, 255, .035);
 
-  border:
-    1px solid #292929;
+  border: 1px solid #292929;
 
   border-radius: 17px;
 }
-
 
 .warning-symbol {
   width: 38px;
@@ -194,13 +193,10 @@ body {
   font-weight: 900;
 }
 
-
 .warning-box strong {
   font-size: 11px;
-
   letter-spacing: 2px;
 }
-
 
 .warning-box p {
   margin-top: 3px;
@@ -240,20 +236,15 @@ body {
     background .2s ease;
 }
 
-
 .start-btn:hover {
   transform: translateY(-2px);
 
   background: #f5c842;
 }
 
-
 .start-btn span:last-child {
   font-size: 20px;
 }
-
-
-/* CREDIT */
 
 .copyright {
   margin-top: 25px;
@@ -266,39 +257,13 @@ body {
 }
 
 
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-  .welcome {
-    padding: 25px 18px;
-  }
-
-  .gold-icon {
-    width: 68px;
-    height: 68px;
-
-    font-size: 29px;
-
-    border-radius: 21px;
-  }
-
-  .welcome h1 {
-    letter-spacing: -2px;
-  }
-
-  .warning-box {
-    margin-top: 30px;
-  }
-
-}
-
-/* =====================================
+/* =========================================================
    STEP 1 - PREPARE
-===================================== */
+========================================================= */
 
 .prepare-page {
   min-height: 100vh;
+
   background:
     radial-gradient(
       circle at 50% 0%,
@@ -306,13 +271,16 @@ body {
       transparent 35%
     ),
     #050505;
+
   color: #fff;
 }
 
 .prepare-container {
   width: 100%;
   max-width: 720px;
+
   margin: 0 auto;
+
   padding: 30px 20px 60px;
 }
 
@@ -327,8 +295,12 @@ body {
 
 .prepare-top a {
   color: #777;
+
   text-decoration: none;
+
   font-size: 12px;
+
+  transition: color .2s ease;
 }
 
 .prepare-top a:hover {
@@ -337,23 +309,33 @@ body {
 
 .prepare-top span {
   color: #666;
+
   font-size: 10px;
   font-weight: 700;
+
   letter-spacing: 2px;
 }
+
+
+/* PROGRESS */
 
 .prepare-progress {
   width: 100%;
   height: 3px;
+
   margin-top: 18px;
+
   overflow: hidden;
+
   background: #191919;
+
   border-radius: 20px;
 }
 
 .prepare-progress div {
   width: 20%;
   height: 100%;
+
   background: #f5c842;
 }
 
@@ -366,38 +348,49 @@ body {
 
 .prepare-label {
   display: inline-block;
+
   padding: 7px 12px;
+
   margin-bottom: 22px;
 
   border: 1px solid #292929;
+
   border-radius: 30px;
 
   color: #777;
+
   font-size: 9px;
   font-weight: 700;
+
   letter-spacing: 2px;
 }
 
 .prepare-heading h1 {
   font-size: clamp(43px, 8vw, 65px);
+
   line-height: 1;
+
   letter-spacing: -3px;
 }
 
 .prepare-heading p {
   max-width: 520px;
+
   margin-top: 20px;
 
   color: #888;
+
   font-size: 14px;
+
   line-height: 1.7;
 }
 
 
-/* CARDS */
+/* PREPARE ITEMS */
 
 .prepare-items {
   display: grid;
+
   gap: 13px;
 }
 
@@ -405,8 +398,11 @@ body {
   min-height: 120px;
 
   display: grid;
+
   grid-template-columns: 65px 1fr 38px;
+
   align-items: center;
+
   gap: 18px;
 
   padding: 22px;
@@ -414,13 +410,17 @@ body {
   background: #101010;
 
   border: 1px solid #222;
+
   border-radius: 20px;
 
-  transition: .2s;
+  transition:
+    transform .2s ease,
+    border-color .2s ease;
 }
 
 .prepare-item:hover {
   transform: translateY(-2px);
+
   border-color: #353535;
 }
 
@@ -435,6 +435,7 @@ body {
   background: #191919;
 
   border: 1px solid #292929;
+
   border-radius: 17px;
 
   font-size: 27px;
@@ -442,13 +443,16 @@ body {
 
 .prepare-text > span {
   color: #555;
+
   font-size: 9px;
   font-weight: 700;
+
   letter-spacing: 2px;
 }
 
 .prepare-text h2 {
   margin-top: 2px;
+
   font-size: 20px;
 }
 
@@ -456,6 +460,7 @@ body {
   margin-top: 3px;
 
   color: #777;
+
   font-size: 13px;
 }
 
@@ -468,24 +473,28 @@ body {
   justify-content: center;
 
   border: 1px solid #333;
+
   border-radius: 50%;
 
   color: #777;
 }
 
 
-/* READY */
+/* READY BOX */
 
 .ready-box {
   display: flex;
+
   gap: 15px;
 
   margin-top: 30px;
+
   padding: 18px;
 
   background: rgba(245, 200, 66, .05);
 
   border: 1px solid rgba(245, 200, 66, .17);
+
   border-radius: 17px;
 }
 
@@ -515,7 +524,9 @@ body {
   margin-top: 3px;
 
   color: #888;
+
   font-size: 12px;
+
   line-height: 1.5;
 }
 
@@ -526,6 +537,7 @@ body {
   width: 100%;
 
   margin-top: 20px;
+
   padding: 18px 21px;
 
   display: flex;
@@ -539,11 +551,14 @@ body {
 
   text-decoration: none;
 
-  transition: .2s;
+  transition:
+    background .2s ease,
+    transform .2s ease;
 }
 
 .prepare-next:hover {
   background: #f5c842;
+
   transform: translateY(-2px);
 }
 
@@ -558,6 +573,7 @@ body {
   opacity: .5;
 
   font-size: 8px;
+
   letter-spacing: 1.5px;
 }
 
@@ -575,48 +591,16 @@ body {
   text-align: center;
 
   color: #3f3f3f;
+
   font-size: 9px;
+
   letter-spacing: 2px;
 }
 
 
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-  .prepare-container {
-    padding: 22px 17px 45px;
-  }
-
-  .prepare-heading {
-    padding-top: 55px;
-  }
-
-  .prepare-heading h1 {
-    letter-spacing: -2px;
-  }
-
-  .prepare-item {
-    grid-template-columns: 52px 1fr 28px;
-    gap: 13px;
-    padding: 17px;
-  }
-
-  .prepare-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 23px;
-  }
-
-  .prepare-check {
-    width: 27px;
-    height: 27px;
-  }
-
-}
-/* =====================================
-   STEP 4 - SHADOWROCKET TUTORIAL
-===================================== */
+/* =========================================================
+   STEP 4 - SHADOWROCKET
+========================================================= */
 
 .shadow-page {
   min-height: 100vh;
@@ -632,20 +616,17 @@ body {
   color: #fff;
 }
 
-
 .shadow-container {
   width: 100%;
   max-width: 760px;
 
   margin: 0 auto;
 
-  padding:
-    30px 20px
-    60px;
+  padding: 30px 20px 60px;
 }
 
 
-/* TOP */
+/* STEP 4 TOP */
 
 .shadow-top {
   display: flex;
@@ -653,20 +634,19 @@ body {
   justify-content: space-between;
 }
 
-
 .shadow-top a {
   color: #777;
 
   text-decoration: none;
 
   font-size: 12px;
-}
 
+  transition: color .2s ease;
+}
 
 .shadow-top a:hover {
   color: #fff;
 }
-
 
 .shadow-top > span {
   color: #666;
@@ -677,6 +657,8 @@ body {
   letter-spacing: 2px;
 }
 
+
+/* STEP 4 PROGRESS */
 
 .shadow-progress {
   width: 100%;
@@ -691,7 +673,6 @@ body {
   border-radius: 50px;
 }
 
-
 .shadow-progress > div {
   width: 0%;
   height: 100%;
@@ -700,32 +681,26 @@ body {
 
   border-radius: 50px;
 
-  transition:
-    width .35s ease;
+  transition: width .35s ease;
 }
 
 
-/* HEADING */
+/* STEP 4 HEADING */
 
 .shadow-heading {
-  padding:
-    65px 0
-    35px;
+  padding: 65px 0 30px;
 }
-
 
 .shadow-label {
   display: inline-block;
 
   margin-bottom: 20px;
 
-  padding:
-    7px 12px;
+  padding: 7px 12px;
 
   color: #777;
 
-  border:
-    1px solid #292929;
+  border: 1px solid #292929;
 
   border-radius: 50px;
 
@@ -735,20 +710,13 @@ body {
   letter-spacing: 2px;
 }
 
-
 .shadow-heading h1 {
-  font-size:
-    clamp(
-      42px,
-      8vw,
-      65px
-    );
+  font-size: clamp(42px, 8vw, 65px);
 
   line-height: .98;
 
   letter-spacing: -3px;
 }
-
 
 .shadow-heading p {
   max-width: 540px;
@@ -762,27 +730,184 @@ body {
   line-height: 1.7;
 }
 
-
 .shadow-heading p strong {
   color: #ddd;
 }
 
 
-/* CARD */
+/* =========================================================
+   STEP 4 - LINK COPY BOX
+========================================================= */
+
+.link-box {
+  width: 100%;
+
+  margin-bottom: 22px;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #101010,
+      #0c0c0c
+    );
+
+  border: 1px solid #242424;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, .22);
+}
+
+.link-box-title {
+  color: #f5c842;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+.link-box-desc {
+  margin-top: 8px;
+  margin-bottom: 15px;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+}
+
+.link-copy-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) auto;
+
+  gap: 9px;
+}
+
+.link-copy-row input {
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+
+  padding: 0 14px;
+
+  background: #050505;
+
+  color: #bcbcbc;
+
+  border: 1px solid #292929;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+  font-size: 11px;
+
+  text-overflow: ellipsis;
+}
+
+.link-copy-row input:focus {
+  border-color:
+    rgba(245, 200, 66, .5);
+}
+
+.link-copy-row button {
+  min-width: 105px;
+  height: 48px;
+
+  padding: 0 18px;
+
+  background: #f5c842;
+
+  color: #000;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: .5px;
+
+  cursor: pointer;
+
+  transition:
+    transform .18s ease,
+    filter .18s ease;
+}
+
+.link-copy-row button:hover {
+  transform: translateY(-1px);
+
+  filter: brightness(1.07);
+}
+
+.link-copy-row button:active {
+  transform: scale(.98);
+}
+
+.copy-status {
+  display: none;
+
+  margin-top: 11px;
+
+  color: #f5c842;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.copy-status.show {
+  display: block;
+
+  animation: copyStatusShow .2s ease;
+}
+
+@keyframes copyStatusShow {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   STEP 4 - TUTORIAL CARD
+========================================================= */
 
 .tutorial-card {
   padding: 20px;
 
   background: #0e0e0e;
 
-  border:
-    1px solid #222;
+  border: 1px solid #222;
 
   border-radius: 24px;
 
   box-shadow:
-    0 30px 80px
-    rgba(0, 0, 0, .4);
+    0 30px 80px rgba(0, 0, 0, .4);
 }
 
 
@@ -795,10 +920,8 @@ body {
 
   padding-bottom: 17px;
 
-  border-bottom:
-    1px solid #202020;
+  border-bottom: 1px solid #202020;
 }
-
 
 .tutorial-status > span {
   color: #555;
@@ -808,7 +931,6 @@ body {
 
   letter-spacing: 2px;
 }
-
 
 .tutorial-status strong {
   color: #777;
@@ -824,17 +946,14 @@ body {
 .tutorial-title {
   display: grid;
 
-  grid-template-columns:
-    48px 1fr;
+  grid-template-columns: 48px 1fr;
 
   gap: 15px;
 
   align-items: center;
 
-  padding:
-    22px 0;
+  padding: 22px 0;
 }
-
 
 .tutorial-number {
   width: 45px;
@@ -861,13 +980,11 @@ body {
   font-weight: 900;
 }
 
-
 .tutorial-title h2 {
   font-size: 20px;
 
   letter-spacing: -.5px;
 }
-
 
 .tutorial-title p {
   margin-top: 5px;
@@ -884,7 +1001,6 @@ body {
 
 .tutorial-image-box {
   width: 100%;
-
   min-height: 400px;
 
   display: flex;
@@ -897,22 +1013,22 @@ body {
 
   background: #050505;
 
-  border:
-    1px solid #202020;
+  border: 1px solid #202020;
 
   border-radius: 18px;
 
   user-select: none;
-}
 
+  touch-action: pan-y;
+}
 
 .tutorial-image-box img {
   display: block;
 
+  width: auto;
   max-width: 100%;
 
-  width: auto;
-
+  height: auto;
   max-height: 68vh;
 
   object-fit: contain;
@@ -920,28 +1036,23 @@ body {
   border-radius: 12px;
 }
 
-
 .tutorial-image-show {
   animation:
-    tutorialImageShow
-    .3s ease;
+    tutorialImageShow .3s ease;
 }
 
-
 @keyframes tutorialImageShow {
-
   from {
     opacity: .25;
-    transform:
-      translateX(10px);
+
+    transform: translateX(10px);
   }
 
   to {
     opacity: 1;
-    transform:
-      translateX(0);
-  }
 
+    transform: translateX(0);
+  }
 }
 
 
@@ -957,11 +1068,8 @@ body {
 
   gap: 6px;
 
-  padding:
-    20px 10px
-    5px;
+  padding: 20px 10px 5px;
 }
-
 
 .tutorial-dot {
   width: 6px;
@@ -977,9 +1085,10 @@ body {
 
   cursor: pointer;
 
-  transition: .2s;
+  transition:
+    width .2s ease,
+    background .2s ease;
 }
-
 
 .tutorial-dot.active {
   width: 19px;
@@ -1003,7 +1112,6 @@ body {
   margin-top: 18px;
 }
 
-
 .tutorial-btn {
   min-height: 65px;
 
@@ -1013,8 +1121,7 @@ body {
 
   gap: 10px;
 
-  padding:
-    13px 17px;
+  padding: 13px 17px;
 
   border: 0;
 
@@ -1024,15 +1131,14 @@ body {
 
   font-family: inherit;
 
-  transition: .2s;
+  transition:
+    transform .2s ease,
+    background .2s ease;
 }
-
 
 .tutorial-btn:hover {
-  transform:
-    translateY(-2px);
+  transform: translateY(-2px);
 }
-
 
 .tutorial-btn small {
   display: block;
@@ -1047,18 +1153,15 @@ body {
   opacity: .5;
 }
 
-
 .tutorial-btn strong {
   display: block;
 
   font-size: 14px;
 }
 
-
 .tutorial-btn > span {
   font-size: 20px;
 }
-
 
 .tutorial-prev {
   background: #191919;
@@ -1068,7 +1171,6 @@ body {
   text-align: right;
 }
 
-
 .tutorial-prev:disabled {
   opacity: .25;
 
@@ -1077,7 +1179,6 @@ body {
   transform: none;
 }
 
-
 .tutorial-next {
   background: #fff;
 
@@ -1085,7 +1186,6 @@ body {
 
   text-align: left;
 }
-
 
 .tutorial-next:hover {
   background: #f5c842;
@@ -1107,28 +1207,91 @@ body {
 }
 
 
-/* MOBILE */
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
 
 @media (max-width: 600px) {
 
-  .shadow-container {
-    padding:
-      22px 15px
-      40px;
+  /* WELCOME */
+
+  .welcome {
+    padding: 25px 18px;
   }
 
+  .gold-icon {
+    width: 68px;
+    height: 68px;
+
+    font-size: 29px;
+
+    border-radius: 21px;
+  }
+
+  .welcome h1 {
+    letter-spacing: -2px;
+  }
+
+  .warning-box {
+    margin-top: 30px;
+  }
+
+
+  /* STEP 1 */
+
+  .prepare-container {
+    padding: 22px 17px 45px;
+  }
+
+  .prepare-heading {
+    padding-top: 55px;
+  }
+
+  .prepare-heading h1 {
+    letter-spacing: -2px;
+  }
+
+  .prepare-item {
+    grid-template-columns:
+      52px 1fr 28px;
+
+    gap: 13px;
+
+    padding: 17px;
+  }
+
+  .prepare-icon {
+    width: 50px;
+    height: 50px;
+
+    font-size: 23px;
+  }
+
+  .prepare-check {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  /* STEP 4 */
+
+  .shadow-container {
+    padding: 22px 15px 40px;
+  }
 
   .shadow-heading {
-    padding:
-      50px 2px
-      28px;
+    padding: 50px 2px 28px;
   }
-
 
   .shadow-heading h1 {
     letter-spacing: -2px;
   }
 
+  .link-box {
+    padding: 15px;
+
+    border-radius: 17px;
+  }
 
   .tutorial-card {
     padding: 13px;
@@ -1136,17 +1299,14 @@ body {
     border-radius: 20px;
   }
 
-
   .tutorial-title {
     grid-template-columns:
       42px 1fr;
 
     gap: 12px;
 
-    padding:
-      18px 2px;
+    padding: 18px 2px;
   }
-
 
   .tutorial-number {
     width: 40px;
@@ -1155,16 +1315,13 @@ body {
     border-radius: 12px;
   }
 
-
   .tutorial-title h2 {
     font-size: 18px;
   }
 
-
   .tutorial-title p {
     font-size: 12px;
   }
-
 
   .tutorial-image-box {
     min-height: 0;
@@ -1174,172 +1331,82 @@ body {
     border-radius: 15px;
   }
 
-
   .tutorial-image-box img {
     max-height: 64vh;
 
     border-radius: 10px;
   }
 
-
   .tutorial-controls {
     grid-template-columns:
       1fr 1.3fr;
   }
 
-
   .tutorial-btn {
     min-height: 61px;
 
-    padding:
-      11px 13px;
+    padding: 11px 13px;
   }
-
 
   .tutorial-btn strong {
     font-size: 13px;
   }
-  .config-copy-box {
-  margin-bottom: 20px;
-  padding: 22px;
-
-  background: #0e0e0e;
-  border: 1px solid #222;
-  border-radius: 22px;
-}
-
-.config-copy-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-}
-
-.config-copy-head span {
-  color: #f5c842;
-  font-size: 8px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.config-copy-head h2 {
-  margin-top: 5px;
-  font-size: 20px;
-}
-
-.config-copy-icon {
-  font-size: 24px;
-}
-
-.config-copy-box > p {
-  margin-top: 13px;
-  color: #777;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.config-link-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.config-link-row input {
-  min-width: 0;
-  padding: 14px;
-
-  background: #050505;
-  color: #aaa;
-
-  border: 1px solid #292929;
-  border-radius: 12px;
-
-  font-family: monospace;
-  font-size: 11px;
-
-  outline: none;
-}
-
-.config-link-row button {
-  padding: 0 18px;
-
-  background: #f5c842;
-  color: #000;
-
-  border: 0;
-  border-radius: 12px;
-
-  font-size: 10px;
-  font-weight: 900;
-
-  cursor: pointer;
-}
-
-.copy-message {
-  display: none;
-
-  margin-top: 12px;
-
-  color: #f5c842;
-  font-size: 11px;
-}
-
-.copy-message.show {
-  display: block;
-}
-
-@media (max-width: 520px) {
-
-  .config-link-row {
-    grid-template-columns: 1fr;
-  }
-
-  .config-link-row button {
-    min-height: 48px;
-  }
-}
 
 }
-.link-copy-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 8px;
-}
 
-.link-copy-row input {
-  min-width: 0;
-  padding: 13px 14px;
 
-  background: #050505;
-  border: 1px solid #292929;
-  border-radius: 11px;
-
-  color: #aaa;
-  font-family: monospace;
-  font-size: 11px;
-}
-
-.link-copy-row button {
-  padding: 0 18px;
-
-  background: #f5c842;
-  color: #000;
-
-  border: 0;
-  border-radius: 11px;
-
-  font-size: 10px;
-  font-weight: 900;
-  cursor: pointer;
-}
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media (max-width: 550px) {
+
   .link-copy-row {
     grid-template-columns: 1fr;
   }
 
   .link-copy-row button {
-    min-height: 46px;
+    width: 100%;
+    min-height: 48px;
   }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .shadow-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .shadow-heading h1 {
+    font-size: 40px;
+  }
+
+  .tutorial-card {
+    padding: 11px;
+  }
+
+  .tutorial-controls {
+    gap: 7px;
+  }
+
+  .tutorial-btn {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .tutorial-btn strong {
+    font-size: 12px;
+  }
+
+  .link-copy-row input {
+    font-size: 10px;
+  }
+
 }
