@@ -100,3 +100,20 @@ async function copyConfigLink() {
 
   }, 2000);
 }
+async function copyConfigLink() {
+  const input = document.getElementById("configLink");
+  const button = document.getElementById("copyBtn");
+
+  try {
+    await navigator.clipboard.writeText(input.value);
+  } catch {
+    input.select();
+    document.execCommand("copy");
+  }
+
+  button.textContent = "✓ ĐÃ SAO CHÉP";
+
+  setTimeout(() => {
+    button.textContent = "SAO CHÉP";
+  }, 1800);
+}
