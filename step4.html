@@ -12,156 +12,208 @@
 
 <body class="shadow-page">
 
-  <main class="shadow-container">
+<main class="shadow-container">
 
-    <!-- TOP -->
-    <div class="shadow-top">
-      <a href="./step3.html">← Bước trước</a>
-
-      <span>BƯỚC 4</span>
-    </div>
-
-    <div class="shadow-progress">
-      <div id="mainProgress"></div>
-    </div>
-
-
-    <!-- HEADING -->
-    <section class="shadow-heading">
-
-      <div class="shadow-label">
-        BƯỚC 04 • SHADOWROCKET
-      </div>
-
-      <h1>
-        Thiết lập<br>
-        Shadowrocket
-      </h1>
-
-      <p>
-        Làm lần lượt theo từng hình bên dưới.
-        Bấm <strong>Tiếp theo</strong> sau khi hoàn thành mỗi bước.
-      </p>
-
-    <div class="link-box">
-  <div class="link-box-title">🔗 LINK CẤU HÌNH</div>
-
-  <div class="link-copy-row">
-    <input
-      id="configLink"
-      type="text"
-      value="https://raw.githubusercontent.com/DungHoang120401/Nobita/refs/heads/main/Module/Locket_Gold_Nobita.sgmodule"
-      readonly
-    >
-
-    <button onclick="copyConfigLink()" id="copyBtn">
-      SAO CHÉP
-    </button>
+  <!-- =========================
+       TOP
+  ========================== -->
+  <div class="shadow-top">
+    <a href="./step3.html">← Bước trước</a>
+    <span>BƯỚC 4</span>
   </div>
-</div>
 
-    <!-- SLIDESHOW -->
-    <section class="tutorial-card">
-
-      <div class="tutorial-status">
-
-        <span id="stepLabel">
-          HƯỚNG DẪN
-        </span>
-
-        <strong>
-          <span id="currentStep">1</span>
-          /
-          <span id="totalStep">13</span>
-        </strong>
-
-      </div>
+  <div class="shadow-progress">
+    <div id="mainProgress"></div>
+  </div>
 
 
-      <!-- TITLE -->
-      <div class="tutorial-title">
+  <!-- =========================
+       HEADING
+  ========================== -->
+  <section class="shadow-heading">
 
-        <div class="tutorial-number" id="stepNumber">
-          01
-        </div>
+    <div class="shadow-label">
+      BƯỚC 04 • SHADOWROCKET
+    </div>
 
-        <div>
-          <h2 id="stepTitle">
-            Mở Shadowrocket
-          </h2>
+    <h1>
+      Thiết lập<br>
+      Shadowrocket
+    </h1>
 
-          <p id="stepDescription">
-            Mở ứng dụng Shadowrocket trên iPhone.
-          </p>
-        </div>
-
-      </div>
-
-
-      <!-- IMAGE -->
-      <div class="tutorial-image-box">
-
-        <img
-          id="tutorialImage"
-          src="./images/shadow-01.jpg"
-          alt="Hướng dẫn Shadowrocket"
-        >
-
-      </div>
-
-
-      <!-- DOTS -->
-      <div
-        class="tutorial-dots"
-        id="tutorialDots">
-      </div>
-
-
-      <!-- BUTTONS -->
-      <div class="tutorial-controls">
-
-        <button
-          id="prevButton"
-          class="tutorial-btn tutorial-prev"
-          onclick="previousStep()"
-        >
-          <span>←</span>
-
-          <div>
-            <small>QUAY LẠI</small>
-            <strong>Trước</strong>
-          </div>
-        </button>
-
-
-        <button
-          id="nextButton"
-          class="tutorial-btn tutorial-next"
-          onclick="nextStep()"
-        >
-
-          <div>
-            <small>ĐÃ LÀM XONG</small>
-            <strong>Tiếp theo</strong>
-          </div>
-
-          <span>→</span>
-
-        </button>
-
-      </div>
-
-    </section>
-
-
-    <p class="shadow-bottom">
-      LOCKET GOLD GUIDE • PHƯỚC
+    <p>
+      Làm lần lượt theo từng hình bên dưới.
+      Bấm <strong>Tiếp theo</strong> sau khi hoàn thành mỗi bước.
     </p>
 
-  </main>
+  </section>
+
+
+  <!-- =========================
+       CONFIG LINK
+  ========================== -->
+  <section class="link-box">
+
+    <div class="link-box-title">
+      🔗 LINK CẤU HÌNH
+    </div>
+
+    <p class="link-box-desc">
+      Sao chép đường dẫn cấu hình trước khi bắt đầu.
+    </p>
+
+    <div class="link-copy-row">
+
+      <input
+        id="configLink"
+        type="text"
+        value="https://raw.githubusercontent.com/DungHoang120401/Nobita/refs/heads/main/Module/Locket_Gold_Nobita.sgmodule"
+        readonly
+      >
+
+      <button
+        id="copyBtn"
+        type="button"
+        onclick="copyConfigLink()"
+      >
+        SAO CHÉP
+      </button>
+
+    </div>
+
+    <div
+      id="copyStatus"
+      class="copy-status"
+    >
+      ✓ Đã sao chép
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SLIDESHOW
+  ========================== -->
+  <section class="tutorial-card">
+
+    <!-- STATUS -->
+
+    <div class="tutorial-status">
+
+      <span>
+        HƯỚNG DẪN
+      </span>
+
+      <strong>
+        <span id="currentStep">1</span>
+        /
+        <span id="totalStep">13</span>
+      </strong>
+
+    </div>
+
+
+    <!-- TITLE -->
+
+    <div class="tutorial-title">
+
+      <div
+        class="tutorial-number"
+        id="stepNumber"
+      >
+        01
+      </div>
+
+      <div>
+
+        <h2 id="stepTitle">
+          Mở Shadowrocket
+        </h2>
+
+        <p id="stepDescription">
+          Mở ứng dụng Shadowrocket trên iPhone.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- IMAGE -->
+
+    <div class="tutorial-image-box">
+
+      <img
+        id="tutorialImage"
+        src="./images/shadow-01.jpg"
+        alt="Hướng dẫn Shadowrocket"
+      >
+
+    </div>
+
+
+    <!-- DOTS -->
+
+    <div
+      class="tutorial-dots"
+      id="tutorialDots"
+    ></div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="tutorial-controls">
+
+      <button
+        id="prevButton"
+        class="tutorial-btn tutorial-prev"
+        type="button"
+        onclick="previousStep()"
+      >
+
+        <span>←</span>
+
+        <div>
+          <small>QUAY LẠI</small>
+          <strong>Trước</strong>
+        </div>
+
+      </button>
+
+
+      <button
+        id="nextButton"
+        class="tutorial-btn tutorial-next"
+        type="button"
+        onclick="nextStep()"
+      >
+
+        <div>
+          <small>ĐÃ LÀM XONG</small>
+          <strong>Tiếp theo</strong>
+        </div>
+
+        <span>→</span>
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <p class="shadow-bottom">
+    LOCKET GOLD GUIDE • PHƯỚC
+  </p>
+
+</main>
 
 
 <script>
+
+/* =========================================
+   NỘI DUNG 13 ẢNH
+========================================= */
 
 const steps = [
 
@@ -176,93 +228,94 @@ const steps = [
     image: "./images/shadow-02.jpg",
     title: "Mở mục Cấu hình",
     description:
-      "Ở thanh menu phía dưới, chọn mục Cấu hình."
+      "Ở thanh menu phía dưới, chọn Cấu hình."
   },
 
   {
     image: "./images/shadow-03.jpg",
     title: "Thêm cấu hình",
     description:
-      "Nhấn dấu + ở góc trên bên phải."
+      "Nhấn dấu + ở góc trên bên phải màn hình."
   },
 
   {
     image: "./images/shadow-04.jpg",
     title: "Nhập link cấu hình",
     description:
-      "Dán cấu hình vừa sao chép ở trên vào ô trống và bấm tải xuống."
+      "Dán link cấu hình bạn vừa sao chép vào ô trống, sau đó bấm Tải xuống."
   },
 
   {
     image: "./images/shadow-05.jpg",
     title: "Kiểm tra cấu hình",
     description:
-      "Sau khi tải thành công, cấu hình sẽ xuất hiện trong danh sách."
+      "Sau khi tải thành công, cấu hình mới sẽ xuất hiện trong danh sách."
   },
 
   {
     image: "./images/shadow-06.jpg",
     title: "Mở tùy chọn cấu hình",
     description:
-      "Chạm vào cấu hình để xem các tùy chọn."
+      "Chạm vào cấu hình để mở danh sách tùy chọn."
   },
 
   {
     image: "./images/shadow-07.jpg",
     title: "Chỉnh sửa cấu hình",
     description:
-      "Mở phần chỉnh sửa để xem các thành phần của cấu hình."
+      "Chọn phần chỉnh sửa cấu hình."
   },
 
   {
     image: "./images/shadow-08.jpg",
-    title: "Cài đặt HTTPS",
+    title: "Thiết lập HTTPS",
     description:
       "Đây là khu vực thiết lập HTTPS nâng cao của Shadowrocket."
   },
 
   {
     image: "./images/shadow-09.jpg",
-    title: "Thiết lập nâng cao",
+    title: "Cài đặt HTTPS nâng cao",
     description:
-      "Kiểm tra các thiết lập HTTPS theo cấu hình mạng hợp lệ của bạn."
+      "Kiểm tra thiết lập HTTPS theo cấu hình mạng hợp lệ mà bạn đang sử dụng."
   },
 
   {
     image: "./images/shadow-10.jpg",
-    title: "Chứng chỉ",
+    title: "Quản lý chứng chỉ",
     description:
-      "Đây là khu vực quản lý chứng chỉ CA của Shadowrocket."
+      "Đây là khu vực quản lý chứng chỉ CA trong Shadowrocket."
   },
 
   {
     image: "./images/shadow-11.jpg",
-    title: "Xác nhận",
+    title: "Xác nhận chứng chỉ",
     description:
-      "Kiểm tra kỹ thông tin trước khi thực hiện thao tác liên quan đến chứng chỉ."
+      "Kiểm tra kỹ thông tin chứng chỉ trước khi tiếp tục."
   },
 
   {
     image: "./images/shadow-12.jpg",
-    title: "Quản lý chứng chỉ",
+    title: "Cài đặt chứng chỉ",
     description:
-      "Shadowrocket cho phép quản lý chứng chỉ được tạo trong ứng dụng."
+      "Thực hiện cài đặt chứng chỉ khi bạn tin tưởng nguồn và hiểu mục đích sử dụng."
   },
 
   {
     image: "./images/shadow-13.jpg",
     title: "Hoàn thành",
     description:
-      "Sau khi hoàn thành cấu hình hợp lệ của bạn, quay trở lại màn hình chính."
+      "Sau khi hoàn thành cấu hình của bạn, quay trở lại màn hình chính."
   }
 
 ];
 
 
+/* =========================================
+   VARIABLES
+========================================= */
+
 let current = 0;
-
-
-/* ELEMENTS */
 
 const image =
   document.getElementById("tutorialImage");
@@ -298,7 +351,72 @@ const mainProgress =
 totalStep.textContent = steps.length;
 
 
-/* CREATE DOTS */
+/* =========================================
+   COPY LINK
+========================================= */
+
+async function copyConfigLink() {
+
+  const input =
+    document.getElementById("configLink");
+
+  const button =
+    document.getElementById("copyBtn");
+
+  const status =
+    document.getElementById("copyStatus");
+
+
+  try {
+
+    await navigator.clipboard.writeText(
+      input.value
+    );
+
+  }
+
+  catch (error) {
+
+    input.removeAttribute("readonly");
+
+    input.select();
+
+    input.setSelectionRange(
+      0,
+      input.value.length
+    );
+
+    document.execCommand("copy");
+
+    input.setAttribute(
+      "readonly",
+      ""
+    );
+
+  }
+
+
+  button.textContent =
+    "✓ ĐÃ SAO CHÉP";
+
+  status.classList.add("show");
+
+
+  setTimeout(() => {
+
+    button.textContent =
+      "SAO CHÉP";
+
+    status.classList.remove("show");
+
+  }, 1800);
+
+}
+
+
+/* =========================================
+   CREATE DOTS
+========================================= */
 
 function createDots() {
 
@@ -309,8 +427,17 @@ function createDots() {
     const dot =
       document.createElement("button");
 
+    dot.type =
+      "button";
+
     dot.className =
       "tutorial-dot";
+
+    dot.setAttribute(
+      "aria-label",
+      "Đi tới bước " + (index + 1)
+    );
+
 
     dot.onclick = () => {
 
@@ -320,6 +447,7 @@ function createDots() {
 
     };
 
+
     dots.appendChild(dot);
 
   });
@@ -327,13 +455,15 @@ function createDots() {
 }
 
 
+/* =========================================
+   UPDATE SLIDE
+========================================= */
+
 function updateTutorial() {
 
   const step =
     steps[current];
 
-
-  /* animation */
 
   image.classList.remove(
     "tutorial-image-show"
@@ -342,10 +472,12 @@ function updateTutorial() {
   void image.offsetWidth;
 
 
-  /* update */
-
   image.src =
     step.image;
+
+  image.alt =
+    step.title;
+
 
   title.textContent =
     step.title;
@@ -353,15 +485,17 @@ function updateTutorial() {
   description.textContent =
     step.description;
 
+
   currentStep.textContent =
     current + 1;
+
 
   stepNumber.textContent =
     String(current + 1)
       .padStart(2, "0");
 
 
-  /* progress */
+  /* PROGRESS */
 
   const percent =
     ((current + 1) / steps.length)
@@ -371,7 +505,7 @@ function updateTutorial() {
     percent + "%";
 
 
-  /* dots */
+  /* DOT */
 
   document
     .querySelectorAll(".tutorial-dot")
@@ -385,13 +519,13 @@ function updateTutorial() {
     });
 
 
-  /* previous */
+  /* PREVIOUS BUTTON */
 
   prevButton.disabled =
     current === 0;
 
 
-  /* LAST STEP */
+  /* NEXT BUTTON */
 
   if (
     current ===
@@ -431,18 +565,12 @@ function updateTutorial() {
     "tutorial-image-show"
   );
 
-
-  /* scroll image into view */
-
-  document
-    .querySelector(".tutorial-card")
-    .scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-
 }
 
+
+/* =========================================
+   NEXT
+========================================= */
 
 function nextStep() {
 
@@ -467,6 +595,10 @@ function nextStep() {
 }
 
 
+/* =========================================
+   PREVIOUS
+========================================= */
+
 function previousStep() {
 
   if (current > 0) {
@@ -480,52 +612,69 @@ function previousStep() {
 }
 
 
-/* SWIPE SUPPORT */
+/* =========================================
+   SWIPE
+========================================= */
 
 let touchStartX = 0;
-
 let touchEndX = 0;
 
 
-document
-  .querySelector(".tutorial-image-box")
-  .addEventListener(
-    "touchstart",
-    function(e) {
-
-      touchStartX =
-        e.changedTouches[0]
-        .screenX;
-
-    }
+const imageBox =
+  document.querySelector(
+    ".tutorial-image-box"
   );
 
 
-document
-  .querySelector(".tutorial-image-box")
-  .addEventListener(
-    "touchend",
-    function(e) {
+imageBox.addEventListener(
+  "touchstart",
+  function(event) {
 
-      touchEndX =
-        e.changedTouches[0]
-        .screenX;
+    touchStartX =
+      event.changedTouches[0].screenX;
 
-      const distance =
-        touchStartX -
-        touchEndX;
+  },
+  {
+    passive: true
+  }
+);
 
-      if (distance > 60) {
-        nextStep();
-      }
 
-      if (distance < -60) {
-        previousStep();
-      }
+imageBox.addEventListener(
+  "touchend",
+  function(event) {
+
+    touchEndX =
+      event.changedTouches[0].screenX;
+
+
+    const distance =
+      touchStartX -
+      touchEndX;
+
+
+    if (distance > 60) {
+
+      nextStep();
 
     }
-  );
 
+    else if (distance < -60) {
+
+      previousStep();
+
+    }
+
+  },
+  {
+    passive: true
+  }
+);
+
+
+/* =========================================
+   START
+========================================= */
 
 createDots();
 updateTutorial();
