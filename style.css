@@ -1199,5 +1199,105 @@ body {
   .tutorial-btn strong {
     font-size: 13px;
   }
+  .config-copy-box {
+  margin-bottom: 20px;
+  padding: 22px;
+
+  background: #0e0e0e;
+  border: 1px solid #222;
+  border-radius: 22px;
+}
+
+.config-copy-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.config-copy-head span {
+  color: #f5c842;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.config-copy-head h2 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.config-copy-icon {
+  font-size: 24px;
+}
+
+.config-copy-box > p {
+  margin-top: 13px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.config-link-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.config-link-row input {
+  min-width: 0;
+  padding: 14px;
+
+  background: #050505;
+  color: #aaa;
+
+  border: 1px solid #292929;
+  border-radius: 12px;
+
+  font-family: monospace;
+  font-size: 11px;
+
+  outline: none;
+}
+
+.config-link-row button {
+  padding: 0 18px;
+
+  background: #f5c842;
+  color: #000;
+
+  border: 0;
+  border-radius: 12px;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.copy-message {
+  display: none;
+
+  margin-top: 12px;
+
+  color: #f5c842;
+  font-size: 11px;
+}
+
+.copy-message.show {
+  display: block;
+}
+
+@media (max-width: 520px) {
+
+  .config-link-row {
+    grid-template-columns: 1fr;
+  }
+
+  .config-link-row button {
+    min-height: 48px;
+  }
+}
 
 }
